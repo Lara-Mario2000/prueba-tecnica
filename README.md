@@ -18,24 +18,24 @@ Para comenzar la prueba, puedes obtener el dataset de cualquiera de las siguient
 Tu tarea principal es ejecutar una segmentación avanzada para identificar el Top Performers del catálogo, utilizando el Percentil 75 como umbral de éxito en rentabilidad y satisfacción.
 
 **Tareas en Python:**
-* **Identificar Umbrales:** Calcula el percentil 75 de la columna `gross income` y de la columna `Rating`.
+* **Identificar Umbrales:** Calcula el **Percentil 75 ($P_{75}$)** de las columnas `gross income` y `Rating`. Este valor estadístico define el límite para aislar al Top 25% de los productos con mayor rentabilidad y satisfacción.
 * **Crear Columna `Product_Tier`:** Clasifica cada transacción bajo la siguiente lógica:
-    * **Star:** Si el Profit Y el Rating están en el Top 25%.
-    * **Cash Cow:** Si el Profit está en el Top 25%, pero el Rating NO.
-    * **Hidden Gem:** Si el Rating está en el Top 25%, pero el Profit NO.
-    * **Standard:** Todo lo que no entre en las categorías anteriores.
+    * **Producto Estrella:** Si el Profit Y el Rating están en el Top 25%.
+    * **Líder de Ingresos:** Si el Profit está en el Top 25%, pero el Rating NO.
+    * **Favorito del Cliente:** Si el Rating está en el Top 25%, pero el Profit NO.
+    * **Rendimiento Estándar:** Todo lo que no entre en las categorías anteriores.
 * **Exportación:** Genera el `.csv` final para tu dashboard.
 
 ---
 
 ## 2. Dashboard (Power BI / Looker)
-Diseña un reporte de **una sola página** que sea creativo y funcional. El diseño es libre, pero debe responder a lo siguiente:
+Diseña un reporte de que sea creativo y funcional. El diseño es libre, pero debe responder a lo siguiente:
 
 1.  **Ventas y Tendencias:** Una línea de tiempo que permita filtrar por la nueva categoría `Product_Tier`.
 2.  **Análisis de Segmentos:** Un gráfico (ej. Treemap o Donut) que muestre qué porcentaje del total de ventas representa cada "Tier" de producto.
 3.  **Matriz de Rendimiento:** Un gráfico de dispersión (Scatter Plot) de Profit vs Rating, donde los puntos estén coloreados por tu segmentación de Python.
 
-**✨ Libertad Creativa:**
+**Libertad Creativa:**
 Tienes total libertad para agregar KPIs adicionales (Ticket promedio, Rating por ciudad, etc.) y personalizar el estilo visual (Dark mode, branding, etc.). Valoramos que el dashboard sea "limpio" y fácil de interpretar para un gerente.
 
 ---
